@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--main-blue: #3D5AFE;
+--secondary-blue: #2962FF;
+--main-Dark-blue: #0039CB;
+--main-Red: #D32F2F;
+--Black-Olive: #3F3F3F;
+--Black-shadow: #33333333;
+--main-left: #FAFBFD;
+--Cetacean-Blue: #090F31;
+--Silver-Foil: #AEAEAE;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+
+body {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.main-left {
+    background: var(--main-left);
+    padding: 20px;
+    height: 100vh;
+    width: 230px;
+    text-align: center;
+}
+
+.main-left .title {
+    font-weight: 600;
+    color: var(--Cetacean-Blue);
+    font-size: 18px;
+}
+
+.main-left .title span {
+    color: #F7542E;
+}
+
+.main-left ul {
+    list-style: none;
+    position: relative;
+    text-align: left;
+    top: 150px;
+    align-items: center;
+}
+
+.main-left li {
+    list-style: none;
+    position: relative;
+    text-align: left;
+    left: 40px;
+    margin: 20px 0px;
+    color: #9E9E9E;
+    transition: 0.4s;
+}
+
+.main-left li:hover {
+    color: var(--Cetacean-Blue);
+}
+
+.main-left li.active {
+    color: var(--Cetacean-Blue);
+    font-weight: 700;
+}
+
+.main-left a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-right {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    padding: 20px 0;
+}
+
+.main-right .title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.main-right a {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+.main-right code {
+    display: flex;
+    gap: 0px;
+    justify-content: space-between;
+}
+
+.main-right .label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.main-right .label .btn-one {
+    border-radius: 6px;
+    margin-top: 10px;
+    width: 81px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+}
+
+.main-right .custom .label {
+    margin-top: 60px;
+}
+
+.se-one .label .btn-one {
+    background-color: #E0E0E0;
+    color: var(--Black-Olive);
+    box-shadow: 0px 2px 3px 0px var(--Black-shadow);
+}
+
+.se-one .label .btn-one.active {
+    background-color: var(--Silver-Foil);
+}
+
+.se-tow .label .btn-one {
+    background-color: transparent;
+    border: 1px solid var(--main-blue);
+    color:  var(--main-blue);
+}
+
+.se-tow .label .btn-one.active {
+    background-color: #2962FF1A;
+}
+
+.se-three .label .btn-one {
+    color:  var(--main-blue);
+    text-align: left;
+}
+
+.se-three .label .btn-one.active {
+    background-color: #2962FF1A;
+    text-align: center;
+}
+
+.se-four .label .btn-one {
+    background-color:  var(--main-blue);
+    color: white;
+}
+
+.se-five .label .btn-one {
+    background-color: #E0E0E0;
+    color: #9E9E9E;
+}
+
+.se-five .label .btn-one.active {
+    background-color: transparent;
+    text-align: left;
+}
+
+.se-five .label.custom-margin {
+    margin-right: -130px;
+}
+
+.se-six .label .btn-one {
+    width: 105px;
+    background-color:  var(--main-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.se-six .label .btn-one.active .gg-share {
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+.se-six .label .btn-one.active p {
+    margin-right: 5px;
+}
+
+.label.icon.custom-flex {
+    margin-right: -172px;
+}
+
+/* Icon */
+.gg-share {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 5px;
+    height: 5px;
+    background: currentColor;
+    border-radius: 100px;
+    box-shadow:
+        10px -6px 0,
+        10px 6px 0;
+            margin-right: 20px;
+}
+
+.gg-share::after,
+.gg-share::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    left: 2px
+}
+
+.gg-share::before {
+    top: 0;
+    transform: rotate(-35deg)
+}
+
+.gg-share::after {
+    bottom: 0;
+    transform: rotate(35deg)
+}
+
+.se-seven .label .btn-one {
+    width: 73px;
+    height: 32px;
+    line-height: 32px;
+    background-color:  var(--main-blue);
+    border: 1px solid  var(--main-blue);
+    color: #fff;
+}
+
+.se-seven .size-md .btn-one {
+    width: 81px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.se-seven .size-lg .btn-one {
+    width: 93px;
+    height: 42px;
+    line-height: 42px;
+}
+
+.label.size-lg {
+    margin-right: -14px;
+}
+
+code.custom-size {
+    gap: 60px;
+}
+
+.se-eight .label .btn-one {
+    background-color: #E0E0E0;
+    color: var(--Black-Olive);
+    box-shadow: 0px 2px 3px 0px var(--Black-shadow);
+}
+
+.se-eight .size-md .btn-one {
+    background-color: var(--secondary-blue);
+    color: white;
+    box-shadow: 0px 2px 3px 0px #2962FF33;
+}
+
+.se-eight .size-lg .btn-one {
+    width: 104px;
+    height: 36px;
+    line-height: 36px;
+    background-color: #455A64;
+    color: white;
+}
+
+.se-eight .label.size-md {
+    margin-right: 27px;
+}
+
+.label.size-md {
+    margin: 0;
+    margin-left: -11px;
+}
+
+.se-eight .label.size-lg {
+    margin-right: 17px;
+}
+
+.se-eight .label.size-danger.btn-one {
+    width: 81px;
+    height: 36px;
+    background-color: var(--main-Red);
+}
+
+.label.size-danger {
+    margin-right: -325px;
+}
+
+.se-eight .size-danger .btn-one {
+    background-color: var(--main-Red);
+    color: white;
+}
+
+.se-nine .label .btn-one {
+    background-color: var(--Silver-Foil);
+    color: var(--Black-Olive);
+    box-shadow: 0px 2px 3px 0px var(--Black-shadow);
+}
+
+.se-nine .color-primary .btn-one {
+    background-color: var(--main-Dark-blue);
+    color: white;
+}
+
+.se-nine .color-secondary .btn-one {
+    background-color: #1C313A;
+    color: white;
+    height: 36px;
+    width: 104px;
+}
+
+.se-nine .color-danger .btn-one {
+    background-color: #9A0007;
+    color: white;
+}
+
+.se-nine code.custom-size {
+    gap: 0px   ;
+}
+
+.label.color-primary {
+    margin-left: -36px;
+}
+
+.label.color-danger {
+    margin-left: 15px;
+    margin-right: -229px;
+}
